@@ -128,3 +128,24 @@ function scoreExams(studentAnswers, correctAnswers) {
     }
     return scores;
 }
+
+
+
+/**
+ * 
+ * @param {Number} xRow number of array rows 
+ * @param {Number} yCol number of array columns 
+ * @returns {Array} array with values 
+ */
+function generateArray(xRow, yCol) {
+    let matrix = [];
+    let value = 1;
+    for (let i = 0; i < xRow; i++) {
+        matrix[i] = [];
+        for (let j = 0; j < yCol; j++) {
+            matrix[i][j] = value;
+            value++;
+        }
+    }
+    return matrix;
+}
