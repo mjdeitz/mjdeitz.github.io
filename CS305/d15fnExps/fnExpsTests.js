@@ -58,9 +58,9 @@ describe("myMap", function () {
     const testArray = [-10, 0, 10, 20];
 
     it("tests myMap on triples anonymous function", function () {
-        assert.deepStrictEqual(myMap(testArray, anonymous), [-30, 0, 30, 60]);
+        assert.deepStrictEqual(myMap(testArray, "anonymous"), [-30, 0, 30, 60]);
     });
     it("tests myMap on triples arrow function", function () {
-        assert.deepStrictEqual(myMap(testArray, arrow), [-30, 0, 30, 60]);
+        assert.deepStrictEqual(myMap(testArray, "arrow"), [-30, 0, 30, 60]);
     });
 });

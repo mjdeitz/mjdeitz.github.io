@@ -67,9 +67,9 @@ function myMap(testArray, testFunction) {
             newArray[i] = double(testArray[i]);
         } else if (testFunction === times100) {
             newArray[i] = times100(testArray[i]);
-        } else if (testFunction === anonymous) {
+        } else if (testFunction === "anonymous") {
             newArray[i] = anonymous(testArray[i]);
-        } else if (testFunction === arrow) {
+        } else if (testFunction === "arrow") {
             newArray[i] = arrow(testArray[i]);
         }
     }
