@@ -44,6 +44,25 @@ function findTitles() {
 
 
 /**
+ * Event handler to display authors sorted alphabetically
+ * @returns {undefined}
+ */
+function showAuthors() {
+
+    /* put all titles into an array, then sort, then join with newline and insert in textarea innerHTML */
+
+    const authors = findAuthors();
+
+    /*need to sort and then join the titles still (e.g., someArray.join("\n")  */
+    authors.sort();
+
+    const authorString = authors.join("\n");
+
+    let textArea = document.getElementById("displayArea");
+    textArea.innerHTML = authorString;
+}
+
+/**
  * 
  * @returns {object} array holding all authors as elements
  */
@@ -55,6 +74,28 @@ function findAuthors() {
     }
     return authors.sort();
 }
+
+
+/**
+ * Event handler to display authors sorted alphabetically
+ * @returns {undefined}
+ */
+function showIDs() {
+
+    /* put all titles into an array, then sort, then join with newline and insert in textarea innerHTML */
+
+    const ids = findIDs();
+
+    /*need to sort and then join the titles still (e.g., someArray.join("\n")  */
+    ids.sort();
+    console.log(ids);
+    const idString = ids.join("\n");
+    console.log(idString);
+
+    let textArea = document.getElementById("displayArea");
+    textArea.innerHTML = idString;
+}
+
 
 
 /**
@@ -79,9 +120,11 @@ function findIDs() {
  * @returns {object} book
  * Event handler for Add book button.  Creates and adds book to the library
  */
-function addBook(title, author, libraryID) {
-    //const title = document.getElementById("title"); //retrieves the book title from the title textbox
+function addBook() {
+    const title = (document.getElementById("title").value); //retrieves the book title from the title textbox
     //finish the implementation -- get the author, create a book object, and add to the library array
+    const author = (document.getElementById("author").value);
+    const libraryID = (document.getElementById("library id").value);
 
     const book = {
         title: title,
@@ -91,5 +134,28 @@ function addBook(title, author, libraryID) {
 
     library.push(book);
 
-    return book;
+    // return book;
 }
+
+/**
+ * @param {String} titles findTitles()
+ * @param {String} titleString toString
+ * 
+ * @returns {*} undefined
+ * Event handler for Scramble button.  
+ */
+function scramble() {
+
+    const titles = findTitles();
+    let titleString = titles.toString();
+    titleString = titleString.replace(/,/g, " ");
+    let titleArray = [];
+    titleArray = titleString.split(" ");
+    titleArray.sort((a, b) => a.length - b.length);
+    let textArea = document.getElementById("displayArea");
+    textArea.innerHTML = titleArray;
+
+
+}
+
+
