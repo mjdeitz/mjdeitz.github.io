@@ -134,7 +134,7 @@ function addBook() {
 
     library.push(book);
 
-    // return book;
+    return book;
 }
 
 /**
