@@ -1,6 +1,6 @@
 "use strict";
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-//module.exports = { findTitles, findAuthors, findIDs, addBook }; 
+// module.exports = { findTitles, findAuthors, findIDs, addBook };
 //add all of your function names here that you need for the node mocha tests
 
 
@@ -120,10 +120,10 @@ function findIDs() {
  * Event handler for Add book button.  Creates and adds book to the library
  */
 function addBook(title, author, libraryID) {
-    title = document.getElementById("title"); //retrieves the book title from the title textbox
+    // title = document.getElementById("title"); //retrieves the book title from the title textbox
     //finish the implementation -- get the author, create a book object, and add to the library array
-    author = document.getElementById("author");
-    libraryID = document.getElementById("library id");
+    // author = document.getElementById("author");
+    // libraryID = document.getElementById("library id");
 
     const book = {
         title: title,
@@ -139,29 +139,29 @@ function addBook(title, author, libraryID) {
 
 
 
-/**
- * @param {String} title book title
- * @param {String} author book author
- * @param {Number} libraryID number
- * @returns {object} book
- * Event handler for Add book button.  Creates and adds book to the library
- */
-function addBook2() {
-    const title = (document.getElementById("title").value); //retrieves the book title from the title textbox
-    //finish the implementation -- get the author, create a book object, and add to the library array
-    const author = (document.getElementById("author").value);
-    const libraryID = (document.getElementById("library id").value);
+// /**
+//  * @param {String} title book title
+//  * @param {String} author book author
+//  * @param {Number} libraryID number
+//  * @returns {object} book
+//  * Event handler for Add book button.  Creates and adds book to the library
+//  */
+// function addBook2() {
+//     const title = (document.getElementById("title").value); //retrieves the book title from the title textbox
+//     //finish the implementation -- get the author, create a book object, and add to the library array
+//     const author = (document.getElementById("author").value);
+//     const libraryID = (document.getElementById("library id").value);
 
-    const book = {
-        title: title,
-        author: author,
-        libraryID: libraryID
-    };
+//     const book = {
+//         title: title,
+//         author: author,
+//         libraryID: libraryID
+//     };
 
-    library.push(book);
+//     library.push(book);
 
-    // return book;
-}
+//     // return book;
+// }
 
 /**
  * @param {String} titles findTitles()
