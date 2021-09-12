@@ -1,7 +1,8 @@
 "use strict"
 
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-//module.exports = { groupById, unique, filterRangeInPlace, filterRange, Calculator, copySorted, getAverageAge, sortByAge }; //add all of your function names here that you need for the node mocha tests
+module.exports = { groupById, unique, filterRangeInPlace, filterRange, Calculator, copySorted, getAverageAge, sortByAge, mapToNames, mapToObjects };
+//add all of your function names here that you need for the node mocha tests
 
 
 /**
@@ -129,4 +130,33 @@ function sortByAge(arr) {
  */
 function getAverageAge(users) {
     return Math.round(users.reduce((prev, user) => prev + user.age, 0) / users.length);
+}
+
+
+/**
+ * 
+ * @param {object} array array 
+ * @returns {object} array after mapping
+ */
+function mapToNames(array) {
+
+    let names = array.map(item => item.name);
+
+    return names;
+}
+
+
+/**
+ * 
+ * @param {object} array array 
+ * @returns {object} array after mapping
+ */
+function mapToObjects(array) {
+
+    let usersMapped = array.map(user => ({
+        fullName: user.name + " " + user.surname,
+        id: user.id
+    }));
+
+    return usersMapped;
 }

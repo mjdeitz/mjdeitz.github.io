@@ -3,16 +3,18 @@
 "use strict";
 /* global assert    */
 /* comment out the node specific code when going to the browser*/
-// const assert = require("assert");  //always need this with node
-// const myExports = require("./methods.js");  //with node need the name of your file with your functions here
-// const groupById = myExports.groupById;  //do this for all of the functions used in the Mocha tests
-// const unique = myExports.unique;
-// const filterRangeInPlace = myExports.filterRangeInPlace;
-// const filterRange = myExports.filterRange;
-// const Calculator = myExports.Calculator;
-// const copySorted = myExports.copySorted;
-// const getAverageAge = myExports.getAverageAge;
-// const sortByAge = myExports.sortByAge;
+const assert = require("assert");  //always need this with node
+const myExports = require("./methods.js");  //with node need the name of your file with your functions here
+const groupById = myExports.groupById;  //do this for all of the functions used in the Mocha tests
+const unique = myExports.unique;
+const filterRangeInPlace = myExports.filterRangeInPlace;
+const filterRange = myExports.filterRange;
+const Calculator = myExports.Calculator;
+const copySorted = myExports.copySorted;
+const getAverageAge = myExports.getAverageAge;
+const sortByAge = myExports.sortByAge;
+const mapToNames = myExports.mapToNames;
+const mapToObjects = myExports.mapToObjects;
 
 
 
@@ -153,5 +155,34 @@ describe("getAverageAge", function () {
     let arr = [pete, john, mary];
     it("tests average age", function () {
         assert.deepEqual(getAverageAge(arr), 28);
+    });
+});
+
+
+
+describe("mapToNames", function () {
+    let john = { name: "John", age: 25 };
+    let pete = { name: "Pete", age: 30 };
+    let mary = { name: "Mary", age: 28 };
+
+    let arr = [john, pete, mary];
+    it("tests convert user objects to array of user names", function () {
+        assert.deepEqual(mapToNames(arr), ['John', 'Pete', 'Mary']);
+    });
+});
+
+
+describe("mapToObjects", function () {
+    let john = { name: "John", surname: "Smith", id: 1 };
+    let pete = { name: "Pete", surname: "Hunt", id: 2 };
+    let mary = { name: "Mary", surname: "Key", id: 3 };
+
+    let users = [john, pete, mary];
+    it("tests convert user objects to array of user names with surnames", function () {
+        assert.deepEqual(mapToObjects(users), [
+            { fullName: "John Smith", id: 1 },
+            { fullName: "Pete Hunt", id: 2 },
+            { fullName: "Mary Key", id: 3 }
+        ]);
     });
 });
