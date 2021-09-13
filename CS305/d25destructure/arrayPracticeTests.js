@@ -15,6 +15,10 @@
 // const findNumAvg = myExports.findNumAvg;
 // const findMaxNum = myExports.findMaxNum;
 // const findMaxAge = myExports.findMaxAge;
+// const chainAvgEvenAges = myExports.chainAvgEvenAges;
+// const chainAvgOddAges = myExports.chainAvgOddAges;
+
+
 
 
 
@@ -105,6 +109,27 @@ describe("reduce practice", function () {
     it("find max age", function () {
         assert.deepEqual(findMaxAge(peopleArray), 80);
     });
+
+
+});
+
+
+describe("chain practice", function () {
+    beforeEach(function () {
+        peopleArray = [{ name: "Sam", age: 15 }, { name: "William", age: 6 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 80 }];
+    });
+
+    it("find average age of even ages", function () {
+        assert.deepEqual(chainAvgEvenAges(peopleArray), 43);
+
+    });
+
+    it("find average age of odd ages", function () {
+        assert.deepEqual(chainAvgOddAges(peopleArray), 14);
+
+    });
+
+
 
 
 });

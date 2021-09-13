@@ -3,7 +3,8 @@
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
 // module.exports = {
 //     doubleNums, doubleAges, filterEven, filterOver10, findEvenNum, findEvenAge,
-//     includesEvenNum, includesEvenAge, findNumSum, findNumAvg, findMaxNum, findMaxAge
+//     includesEvenNum, includesEvenAge, findNumSum, findNumAvg, findMaxNum, findMaxAge,
+//     chainAvgEvenAges, chainAvgOddAges
 // };
 //add all of your function names here that you need for the node mocha tests
 
@@ -166,4 +167,36 @@ function findMaxAge(arr) {
     }
 
     return ageArray.reduce((num1, num2) => Math.max(num1, num2));
+}
+
+
+/**
+ * 
+ * @param {object} arr people array 
+ * @returns {Number} average even ages
+ */
+function chainAvgEvenAges(arr) {
+
+    let avgEvenAges = arr
+        .map(arr => arr.age)
+        .filter(num => num % 2 === 0)
+        .reduce((sum, current) => (sum + current) / 2);
+
+    return avgEvenAges;
+}
+
+
+/**
+ * 
+ * @param {object} arr people array 
+ * @returns {Number} average odd ages
+ */
+function chainAvgOddAges(arr) {
+
+    let avgOddAges = arr
+        .map(arr => arr.age)
+        .filter(num => num % 2 === 1)
+        .reduce((sum, current) => (sum + current) / 2);
+
+    return avgOddAges;
 }
