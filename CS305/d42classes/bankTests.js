@@ -109,6 +109,7 @@ describe("SavingsAccount", () => {
 
     describe("addInterest() method", () => {
         it("adds the calculated interest to this account", () => {
+            savings = new SavingsAccount(1);  // needed to resolve error "undefined"
             savings.setInterest(5);
             savings.deposit(100);
             savings.addInterest();
