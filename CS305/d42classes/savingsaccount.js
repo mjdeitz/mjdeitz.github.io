@@ -65,13 +65,17 @@ class SavingsAccount extends Account {
      * @returns {String} string saying interest was added
      */
     endOfMonth() {
-        return "Interest added SavingsAccount " + savings.getNumber() + ": balance: " + savings._balance + " interest: " + savings._interest;
+        return "Interest added SavingsAccount " + this.getNumber() + ": balance: " + this._balance + " interest: " + this._interest;
     }
 }
-
-
-
-
+// let savings = undefined;
+// savings = new SavingsAccount(1);  // needed to resolve error "undefined"
+// savings.setInterest(5);
+// savings.deposit(100);
+// savings.addInterest();
+// console.log(savings.getBalance());
+// savings.withdraw(5);
+// console.log(savings.getBalance());
 
 /* global exports */
 // exports.SavingsAccount = SavingsAccount;

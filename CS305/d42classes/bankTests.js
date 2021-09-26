@@ -109,7 +109,6 @@ describe("SavingsAccount", () => {
 
     describe("addInterest() method", () => {
         it("adds the calculated interest to this account", () => {
-            savings = new SavingsAccount(1);  // needed to resolve error "undefined"
             savings.setInterest(5);
             savings.deposit(100);
             savings.addInterest();
@@ -126,7 +125,8 @@ describe("SavingsAccount", () => {
     describe("endOfMonth() method", () => {
         it("returns a string saying that interest was added", () => {
             savings.withdraw(5);
-            assert.equal(savings.endOfMonth(), "Interest added SavingsAccount 1: balance: 105 interest: 5");
+            assert.equal(savings.endOfMonth(), "Interest added SavingsAccount 1: balance: 100 interest: 5");
+            // test is showing balance: 105  *** correction: after withdrawal balance is 100 *** 
         });
     });
 
