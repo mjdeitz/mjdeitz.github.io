@@ -1,0 +1,136 @@
+body {
+    background-color: #011f4b;
+}
+
+/*STYLE FOR TOP BANNER with links to other pages*/
+
+.logoBox {
+    margin: auto;
+    margin-top: 3%;
+    width: 110px;
+    height: 110px;
+    color: #03396c;
+    /* border: 7px;
+    border-color: black;
+    border-style: solid;*/
+    /* display: inline-block; */
+}
+
+.letterBox {
+    font-size: 52px;
+    width: 50px;
+    height: 54px;
+    font-weight: bold;
+    /* border: 1px;
+    border-color: darkblue;
+    background-color: lightskyblue;
+    border-style: solid;*/
+    display: inline-block;
+}
+
+#dbox {
+    position: relative;
+    top: 32px;
+    left: -12px;
+}
+
+.bannerBox {
+    display: flex;
+    /*everything inside bannerBox is now flex*/
+    /* flex-direction: column; */
+    flex-direction: row;
+    background-color: #03396c;
+    /* flex-wrap: wrap; */
+    /*adjust itself good for cell phones it will wrap the data*/
+    justify-content: center;
+    /*to use this need to comment out flex-wrap*/
+    border-radius: 15px;
+}
+
+.bannerBox>div {
+    /* display: inline-block; */
+    background-color: #005b96;
+    margin: 10px;
+    text-align: center;
+    width: 100px;
+    /*when use flex set the width and then use .container to set everything*/
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+#courses {
+    width: 200px;
+}
+
+.links {
+    cursor: pointer;
+}
+
+/*STYLE FOR SUBHEADER(Courses) and courses*/
+
+.container {
+    margin-top: 3rem;
+    margin-left: 15%;
+    margin-right: 15%;
+    /* display: inline-block; */
+    display: flex;
+    /*everything inside container is now flex*/
+    /* flex-direction: column; */
+    flex-direction: column;
+    background-color: #03396c;
+    /* flex-wrap: wrap; */
+    /*adjust itself good for cell phones it will wrap the data*/
+    /* justify-content: center; */
+    /*to use this need to comment out flex-wrap*/
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 15px;
+    /* border: solid;
+    border-color: #03396c;
+    overflow: hidden; */
+}
+
+.container>div {
+    background-color: #005b96;
+    margin: 10px;
+    width: 54rem;
+    /*when use flex set the width and then use .container to set everything*/
+    font-size: 30px;
+    border-radius: 15px;
+}
+
+.row {
+    color: #b3cde0;
+    border: #b3cde0;
+    border-width: 5px;
+    border-style: double;
+}
+
+#row1 {
+    margin-left: 3%;
+}
+
+#row2 {
+    margin-left: 6%;
+}
+
+#row3 {
+    margin-left: 9%;
+}
+
+#row4 {
+    margin-left: 12%;
+}
+
+#row5 {
+    margin-left: 15%;
+}
+
+.subheader {
+    margin-top: 0%;
+    font-family: Impact;
+    color: #6497b1;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
