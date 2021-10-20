@@ -1,0 +1,119 @@
+body {
+    background-color: #011f4b;
+}
+
+.bannerBox {
+    display: flex;
+    /*everything inside bannerBox is now flex*/
+    /* flex-direction: column; */
+    flex-direction: row;
+    background-color: #03396c;
+    /* flex-wrap: wrap; */
+    /*adjust itself good for cell phones it will wrap the data*/
+    justify-content: center;
+    /*to use this need to comment out flex-wrap*/
+    border-radius: 15px;
+}
+
+.bannerBox>div {
+    /* display: inline-block; */
+    background-color: #005b96;
+    margin: 10px;
+    text-align: center;
+    width: 100px;
+    /*when use flex set the width and then use .container to set everything*/
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#about {
+    width: 200px;
+}
+
+.links {
+    cursor: pointer;
+}
+
+/*STYLE FOR (michael deitzel/about me) and INFO/SKILLS Container*/
+
+#myName {
+    text-align: center;
+    font-size: 60px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #b3cde0;
+    position: relative;
+}
+
+#background {
+    text-align: center;
+    font-size: 90px;
+    font-family: Verdana;
+    color: #03396c;
+    font-weight: bolder;
+    word-spacing: 35px;
+    position: absolute;
+    top: -25%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    z-index: -1;
+    /* overflow: hidden; */
+}
+
+.subHeader {
+    font-family: Impact;
+    color: #6497b1;
+}
+
+.outer {
+    background-color: #03396c;
+    font-size: 30px;
+}
+
+.inner {
+    background-color: #005b96;
+}
+
+.family {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+/*STYLE FOR TOP BANNER with links to other pages*/
+
+.logoBox {
+    margin: auto;
+    margin-top: 20px;
+    width: 110px;
+    height: 110px;
+    color: #03396c;
+    /* border: 7px;
+    border-color: black;
+    border-style: solid;*/
+    /* display: inline-block; */
+}
+
+.letterBox {
+    font-size: 52px;
+    width: 50px;
+    height: 54px;
+    font-weight: bold;
+    /* border: 1px;
+    border-color: darkblue;
+    background-color: lightskyblue;
+    border-style: solid;*/
+    display: inline-block;
+}
+
+#dbox {
+    position: relative;
+    top: 32px;
+    left: -12px;
+}
+
+@media screen and (max-width: 980px) {
+    #myName {
+        display: none;
+    }
+}
