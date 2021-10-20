@@ -31,6 +31,11 @@ window.onload = function () {
     contact.addEventListener('click', function () {
         window.open("./contactResponsive.html", '_blank');
     })
+    
+    const admin = document.getElementById('admin');
+    admin.addEventListener('click', function () {
+        window.open("./adminLogin.html", '_blank');
+    })
 
     document.querySelector("button").addEventListener("click", sortByDate);
 }
