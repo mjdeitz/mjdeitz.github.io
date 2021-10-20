@@ -37,6 +37,11 @@ window.onload = function () {
     slideshow.addEventListener('click', function () {
         window.open("./slideshowResponsive.html", '_blank');
     })
+    
+    const admin = document.getElementById('admin');
+    admin.addEventListener('click', function () {
+        window.open("./adminLogin.html", '_blank');
+    })
 
     const clock = setInterval(myTimer, 1000);
 
