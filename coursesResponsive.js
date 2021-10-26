@@ -4,7 +4,7 @@
 window.onload = function () {
     const home = document.getElementById('home');
     home.addEventListener('click', function () {
-        window.open("./mainResponsive.html", '_blank');
+        window.open("./index.html", '_blank');
     })
 
     const about = document.getElementById('about');
