@@ -10,7 +10,7 @@ async function fetchUser() {
 
     const userId = document.getElementById('userId').value;
 
-    let result = await fetch('http://jsonplaceholder.typicode.com/users/' + userId);
+    let result = await fetch('https://jsonplaceholder.typicode.com/users/' + userId);
     let userInfoArray = await result.json();
 
     renderUserInfo(userInfoArray);
@@ -52,7 +52,7 @@ async function renderUserPosts() {
     userPostsDiv.innerHTML = '';
 
     const userId = document.getElementById('userId').value;
-    let result = await fetch('http://jsonplaceholder.typicode.com/posts/?userId=' + userId);
+    let result = await fetch('https://jsonplaceholder.typicode.com/posts/?userId=' + userId);
     let userPostsArray = await result.json();
 
 
@@ -83,7 +83,7 @@ async function renderUserPosts() {
             userPostsDiv.append(commDiv);
 
             async function renderPostComments() {
-                let result = await fetch('http://jsonplaceholder.typicode.com/comments/?postId=' + userPost.id);
+                let result = await fetch('https://jsonplaceholder.typicode.com/comments/?postId=' + userPost.id);
                 let userCommentsArray = await result.json();
                 console.log(userCommentsArray);
                 from(userCommentsArray)
