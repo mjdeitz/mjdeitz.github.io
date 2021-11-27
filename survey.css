@@ -1,0 +1,65 @@
+#title {
+    font-family: Verdana;
+}
+
+#header {
+    color: blue;
+    text-align: center;
+}
+
+#p {
+    font-size: large;
+    font-weight: bold;
+}
+
+.div {
+    margin-top: 20px;
+}
+
+/* .select {
+    width: 100%;
+} */
+
+input[type=text], .select {
+    width: 100%;
+    margin: 5px 0;
+    /* puts vertical space between label name and textBox*/
+    padding: 10px 20px;
+    /*12 is vertical 20 is horizontal for text inside the textBox*/
+}
+
+.radio {
+    font-size: large;
+}
+
+.label {
+    font-size: large;
+}
+
+.subtext {
+    font-size: small;
+}
+
+.checkbox, .radio, .select, .label {
+    font-weight: bold;
+}
+
+#submitButton {
+    width: 100%;
+    background-color: darkgreen;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.topDiv {
+    background-color: lightskyblue;
+    padding: 20px;
+}
+
+#output {
+    min-width: 500px;
+    max-width: 100%;
+    min-height: 10px;
+    height: 10%;
+    width: 100%;
+}

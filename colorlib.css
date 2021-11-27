@@ -1,0 +1,72 @@
+body {
+    background-color: black;
+    padding-top: 5%;
+}
+
+h4 {
+    color: white;
+}
+
+.grayText {
+    color: #76757a;
+}
+
+.whiteText {
+    color: white;
+}
+
+.picBox {
+    display: grid;
+    grid-template-areas: "a b" "c d";
+}
+
+.box1 {
+    grid-area: a;
+}
+
+.box2 {
+    grid-area: b;
+}
+
+.box3 {
+    grid-area: c;
+}
+
+.box4 {
+    grid-area: d;
+}
+
+.btn-props {
+    color: white;
+    background-color: #e7873b;
+    border-color: black;
+}
+
+#input-props {
+    background-color: #2a2b30;
+    border-color: black;
+}
+
+input[type='text']:focus {
+    color: white;
+}
+
+.pic-size {
+    height: 80%;
+    width: 80%;
+}
+
+hr {
+    height: 0px;
+    border: none;
+    border-top: 2px solid #76757a;
+}
+
+.color-lib {
+    font-size: x-large;
+}
+
+.whiteText2 {
+    font-weight: bold;
+    color: white;
+}

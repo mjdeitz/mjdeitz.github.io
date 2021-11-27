@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <title> survey </title>
+    <script src="./survey.js"></script>
+    <link rel="stylesheet" href="./survey.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1 id="title">Survey Form</h1>
+            <p id="p">Thank you for taking the time to help us improve the platform</p>
+        </div>
+
+
+        <div class="topDiv">
+            <form onsubmit="return validate()" name="surveyForm">
+                <div class="div"><label for="Name" class="label">Name</label>
+                    <input type="text" id="name" name="name" size="263" placeholder="Enter your name">
+                </div>
+                <div class="div"><label for="Email" class="label">Email</label>
+                    <input type="text" id="email" name="email" size="263" placeholder="Enter your email">
+                </div>
+                <div class="div"><label for="age" class="label">Age<span class="subtext">(optional)</span></label>
+                    <input type="text" id="age" name="age" size="263" placeholder="Age">
+                </div>
+                <div class="div"><label for="role" class="label">Which option best describes your current role?</label>
+                    <div>
+                        <select class="select" name="role" id="other">
+                            <option value="0">Select current role</option>
+                            <option value="Student">Student</option>
+                            <option value="Job">Job</option>
+                            <option value="Learner">Learner</option>
+                            <option value="PreferNo">PreferNo</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="div"><label for="recommend" class="label">Would you recommend the platform to a
+                        friend?</label><br>
+                      <input type="radio" id="def" name="recommend" value="Definitely">
+                      <label for="Definitely" class="radio">Definitely</label>
+                      <input type="radio" id="maybe" name="recommend" value="Maybe">
+                      <label for="Maybe" class="radio">Maybe</label>
+                      <input type="radio" id="notSure" name="recommend" value="Not sure">
+                      <label for="Not sure" class="radio">Not sure</label>
+
+                </div>
+
+                <div class="div"><label for="feature" class="label">What is your favorite feature of the
+                        platform?</label>
+                      <div>
+                        <select class="select" name="feature">
+                            <option value="0">Select an option</option>
+                            <option value="challenges">challenges</option>
+                            <option value="projects">projects</option>
+                            <option value="community">community</option>
+                            <option value="openSource">openSource</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="div"><label for="feature" class="label">What would you like to see improved?
+                        <span class="subtext">(Check all that apply)</span></label><br>
+                    <input type="checkbox" id="box1" name="box1" value="Front-end Projects">
+                    <label for="box1" class="checkbox"> Front-end Projects</label><br>
+                    <input type="checkbox" id="box2" name="box2" value="Back-end Projects">
+                    <label for="box2" class="checkbox"> Back-end Projects</label><br>
+                    <input type="checkbox" id="box3" name="box3" value="Challenges">
+                    <label for="box3" class="checkbox"> Challenges</label><br>
+                    <input type="checkbox" id="box3" name="box3" value="Additional Courses">
+                    <label for="box3" class="checkbox"> Additional Courses</label>
+                </div>
+
+                <div class="div"><label for="feature" class="label">Any comments or suggestions?</label><br>
+                    <textarea id="output" name="output" placeholder="Enter your comment here"></textarea>
+                </div>
+                <div class=div><input type="submit" id="submitButton" value="Submit" /></div>
+
+
+            </form>
+        </div>
+    </div>
+</body>
+
+
+</html>

@@ -1,0 +1,83 @@
+body {
+    background-color: #011f4b;
+}
+
+.bannerBox {
+    display: flex;
+    /*everything inside bannerBox is now flex*/
+    /* flex-direction: column; */
+    flex-direction: row;
+    background-color: #03396c;
+    /* flex-wrap: wrap; */
+    /*adjust itself good for cell phones it will wrap the data*/
+    justify-content: center;
+    /*to use this need to comment out flex-wrap*/
+    border-radius: 15px;
+}
+
+.bannerBox>div {
+    /* display: inline-block; */
+    background-color: #005b96;
+    margin: 10px;
+    text-align: center;
+    width: 100px;
+    /*when use flex set the width and then use .container to set everything*/
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#courses {
+    width: 200px;
+}
+
+.links {
+    cursor: pointer;
+}
+
+.family {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+tr {
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    color: #b3cde0;
+}
+
+.btn-primary {
+    background-color: #03396c;
+    color: #b3cde0;
+    border-color: #03396c;
+}
+
+.logoBox {
+    margin: auto;
+    margin-top: 3%;
+    width: 110px;
+    height: 110px;
+    color: #03396c;
+    /* border: 7px;
+    border-color: black;
+    border-style: solid;*/
+    /* display: inline-block; */
+}
+
+.letterBox {
+    font-size: 52px;
+    width: 50px;
+    height: 54px;
+    font-weight: bold;
+    /* border: 1px;
+    border-color: darkblue;
+    background-color: lightskyblue;
+    border-style: solid;*/
+    display: inline-block;
+}
+
+#dbox {
+    position: relative;
+    top: 32px;
+    left: -12px;
+}
