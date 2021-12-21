@@ -38,6 +38,11 @@ window.onload = function () {
         window.open("./slideshowResponsive.html", '_blank');
     })
 
+    const certificates = document.getElementById('certs');
+    certificates.addEventListener('click', function () {
+        window.open("./certificates.html", '_blank');
+    })
+
     const admin = document.getElementById('admin');
     admin.addEventListener('click', function () {
         window.open("./adminLogin.html", '_blank');
